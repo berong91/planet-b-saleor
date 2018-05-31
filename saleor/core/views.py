@@ -8,6 +8,7 @@ from impersonate.views import impersonate as orig_impersonate
 from ..account.models import User
 from ..dashboard.views import staff_member_required
 from ..product.utils import products_for_homepage, products_with_availability
+from ..initiatives.utils import initiatives_for_homepage
 from ..seo.schema.webpage import get_webpage_schema
 
 
@@ -22,6 +23,20 @@ def home(request):
             'products': products,
             'webpage_schema': json.dumps(webpage_schema)})
 
+def about(request):
+    return TemplateResponse(
+        request, 'brands.html', {})
+
+def brands(request):
+    return TemplateResponse(
+        request, 'brands.html',
+        {})
+
+def initiatives(request):
+    initiatives = initiatives_for_homepage();
+    return TemplateResponse(
+        request, 'initiatives.html',
+        {'initiatives' : initiatives})
 
 @staff_member_required
 def styleguide(request):
