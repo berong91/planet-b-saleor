@@ -1,13 +1,13 @@
 .footer {
-  background-color: $dark-blue;
+  background-color: $brand;
   padding: $global-padding * 2 0;
   color: $white;
-  margin-top: $global-margin * 8;
   @include media-breakpoint-down(xs) {
     text-align: center;
     margin-top: $global-margin * 2;
   }
   &__logo svg {
+    max-width: 50px;
   }
   &__logo {
     margin-bottom: $global-margin;

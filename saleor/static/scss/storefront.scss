@@ -1,4 +1,5 @@
 @import "variables";
+@import "fontawesome/font-awesome";
 @import "~bootstrap/scss/bootstrap";
 
 @import "global";
@@ -26,6 +27,7 @@
 @import "layouts/cart";
 @import "layouts/checkout";
 @import "layouts/home";
+@import "layouts/initiatives";
 @import "layouts/login";
 @import "layouts/no-results";
 @import "layouts/order-details";

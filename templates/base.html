@@ -48,21 +48,55 @@
 {% block header %}
   {% include 'base_header.html' %}
 {% endblock %}
-<div class="container maincontent">
-  {% block topcontent %}{% endblock topcontent %}
-  {% if messages %}
-    {% for message in messages %}
-      <div class="alert{% if message.tags %} alert-{{ message.tags }}{% endif %}">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        {{ message }}
+
+{% block drive_innovation %}
+ <div class="innovation-section section container p-vertical_large">
+    <div class="grid grid-align_center grid-content_between">
+      <div class="grid-col">
+        <a href="" class="btn neutral item_neutral">Shop</a>
       </div>
-    {% endfor %}
-  {% endif %}
-  {% block breadcrumb %}
-  {% endblock breadcrumb %}
-  {% block content %}
-  {% endblock content %}
-</div>
+      <div class="grid-col">
+        <div class="item_expr">+</div>
+      </div>
+      <div class="grid-col">
+        <a href="{% url 'initiatives' %}" class="btn neutral item_neutral">Choose Initiatives</a>
+      </div>
+      <div class="grid-col">
+        <div class="item_expr">=</div>
+      </div>
+      <div class="grid-col">
+        <a href="{% url 'about' %}" class="btn brand item_brand">Drive Innovation</a>
+      </div>
+
+    </div>
+ </div>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+  <div class="top-section container">
+    {% block topcontent %}{% endblock topcontent %}
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert{% if message.tags %} alert-{{ message.tags }}{% endif %}">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <div class="breadcrumb-section p-vertical_small">
+    <div class="container">
+      {% block breadcrumb %}
+      {% endblock breadcrumb %}
+    </div>
+  </div>
+  <div class="{{ container_class|default_if_none:'' }}">
+    <div class="container maincontent">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </div>
 {% block footer %}
   {% include 'base_footer.html' %}
 {% endblock %}

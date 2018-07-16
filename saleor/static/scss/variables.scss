@@ -18,9 +18,10 @@ $light-gray: #f2f2f2;
 $gray: #D3D1D0;
 $darken-gray: darken($gray, 10%);
 $skull-gray: #828282;
+$soft-blue: #26a5d4;
 $blue: #26A5D4;
 $darken-blue: darken($blue, 10%);
-$dark-blue: #092959;
+$brand: #092959;
 $red: #EB5757;
 $dark-red: #c53636;
 $green: #27AE60;
@@ -28,12 +29,18 @@ $beige: #FFFAEC;
 $yellow: #E6E617;
 $error: $dark-red;
 $weak: $skull-gray;
+$progress-yellow: #f2f218;
+$progress-green: #18f2aa;
+$progress-blue: #1885f2;
 
 // TYPOGRAPHY
 $font-family-sans-serif: 'Lato', sans-serif;
 $h1-font-size: 3rem;
 $h2-font-size: 1.3rem;
 $h3-font-size: 1rem;
+
+// BACKGROUND IMAGE URLS
+$gray-tile: url(../images/gray_tile.png);
 
 $theme-colors: (
   primary: $blue,

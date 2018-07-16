@@ -1,0 +1,45 @@
+.initiatives {
+	background-color: rgba(242, 242, 242, 0.3);
+	.header {
+		border-bottom: 1px solid rgba(197, 197, 197, 1);
+		span {
+			color: rgb(142, 142, 142);
+		}
+		&_seperator {
+			height: 4rem;
+			border-right: 2px solid rgb(231, 231, 231);
+			width: 1px;
+		}
+	}
+}
+
+.init {
+	border: 1px solid rgba(190, 190, 190, 1);
+	-webkit-box-shadow: 3px 3px 7px 0px rgba(191,191,191,1);
+	-moz-box-shadow: 3px 3px 7px 0px rgba(191,191,191,1);
+	box-shadow: 3px 3px 7px 0px rgba(191,191,191,1);
+	background: white;
+	&-percent {
+		color: $soft-blue;
+		font-style: bold;
+	}
+
+	&_banner {
+		background-image: url(/static/images/initiatives/banner.png);
+		height: 400px;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&-image {
+		background-size: cover;
+		height: 10rem;
+	}
+
+	.progress {
+		height: 0.4rem;
+	}
+	.progress-yellow { background-color: $progress-yellow; }
+	.progress-green  { background-color: $progress-green; }
+	.progress-blue   { background-color: $progress-blue; }
+}

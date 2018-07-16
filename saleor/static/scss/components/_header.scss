@@ -131,6 +131,7 @@
 
 .navbar {
   &__logo svg {
+    max-width: 150px;
   }
   &__logo {
     svg {
@@ -159,6 +160,12 @@
         display: inline-block;
         padding: 0 $global-padding / 2;
         line-height: 1.9rem;
+        &:first-of-type {
+          padding-left: 0;
+        }
+        &:last-of-type {
+          padding-right: 0;
+        }
         a {
           color: $body-color;
           font-size: 0.7rem;
@@ -168,7 +175,6 @@
     }
   }
   &__logo {
-    padding: $global-padding * 2 0;
     display: flex;
     align-items: center;
     .menu-icon-mobile {

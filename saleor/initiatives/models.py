@@ -17,19 +17,51 @@ from mptt.models import MPTTModel
 from text_unidecode import unidecode
 from versatileimagefield.fields import PPOIField, VersatileImageField
 
+class Initiative_SortMethod(models.Model):
+
+    class Meta:
+        app_label = 'sort'
+
+    def __init__(self, obj):
+        self.value = obj['value']
+        self.label = obj['label']
+        self.name = obj['value']
+
+    def __str__(self):
+        return self.name
+
+class Initiative_About(models.Model):
+
+    class Meta:
+        app_label = 'about'
+
+    def __init__(self, obj):
+        self.value = obj['value']
+        self.label = obj['label']
+        self.name = obj['value']
+
+    def __str__(self):
+        return self.name
+
 class Initiative(models.Model):
-    name = 'tacos' # models.CharField(max_length=128)
     slug = 'tacos' # models.SlugField(max_length=128)
-    description = 'tacos' # models.TextField(blank=True)
-    author = 'tacos' # models.CharField(max_length=128)
-    location = 'tacos' # models.CharField(max_length=128)
-    total_donations = 'tacos' # MoneyField(
+    name = 'Haiti Earth Quake Initiative' # models.CharField(max_length=128)
+    description = 'Does the thing' # models.TextField(blank=True)
+    author_first_name = 'Steve' # models.CharField(max_length=128)
+    author_last_name = 'Billy' # models.CharField(max_length=128)
+    location_city = 'City' # models.CharField(max_length=128)
+    location_state = 'State' # models.CharField(max_length=128)
+    location_country = 'Haiti' # models.CharField(max_length=128)
+    total_donations = '100,000' # MoneyField(
     #     currency=settings.DEFAULT_CURRENCY, max_digits=12, decimal_places=2,
     #     blank=True, null=True)
-    donation_goal = 'tacos' # MoneyField(
+    donation_goal = '400,000' # MoneyField(
     #     currency=settings.DEFAULT_CURRENCY, max_digits=12, decimal_places=2,
     #     blank=True, null=True)
-    donation_days_left = 'tacos' # models.PositiveIntegerField(editable=False)
+    goal_percentage = 25;
+    initiative_category = 'Natural Disasters'
+    background_image_url = '/static/images/initiatives/forestFire.jpg'
+    donation_days_left = 5 # models.PositiveIntegerField(editable=False)
 
     class Meta:
         app_label = 'initiative'
